@@ -12,7 +12,7 @@ import {
   User 
 } from "lucide-react";
 
-const API_BASE_URL = "http://localhost:5000/api/requests";
+const API_BASE_URL = "https://employee-request.onrender.com/api/requests";
 
 export default function App() {
   const [requests, setRequests] = useState([]);
@@ -158,6 +158,10 @@ export default function App() {
                 <p className="text-slate-300">Ticket: <span className="font-mono text-white">{lastTicket.ticket_id}</span></p>
                 <p className="text-slate-300">Category: <span className="text-indigo-300">{lastTicket.category}</span></p>
                 <p className="text-slate-300">SLA: <span className="text-amber-300">{lastTicket.sla_hours} hrs</span></p>
+               <p className="text-[11px] text-emerald-300/90 pt-1 flex items-center gap-1">
+      ✉️ Confirmation email sent to your inbox.
+    </p>
+                
               </div>
             )}
 
